@@ -16,19 +16,38 @@ from hal import hal_buzzer as buzzer
 from hal import hal_servo as servo
 import version as ver
 
+def blink_led_once(delay):
+    led.set_output(0, 1)
+    time.sleep(delay)
+    led.set_output(0, 0)
+    time.sleep(delay)
+
 def blink_led(delay):
     # Led Blink
     led.init()
 
     led.set_output(0, 1)
     time.sleep(delay)
-
     led.set_output(0, 0)
     time.sleep(delay)
 
     led.set_output(0, 1)
     time.sleep(delay)
+    led.set_output(0, 0)
+    time.sleep(delay)
 
+    led.set_output(0, 1)
+    time.sleep(delay)
+    led.set_output(0, 0)
+    time.sleep(delay)
+
+    led.set_output(0, 1)
+    time.sleep(delay)
+    led.set_output(0, 0)
+    time.sleep(delay)
+
+    led.set_output(0, 1)
+    time.sleep(delay)
     led.set_output(0, 0)
     time.sleep(delay)
 
